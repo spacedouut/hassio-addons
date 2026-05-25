@@ -22,7 +22,7 @@ log() {
 map_architecture() {
     local build_arch="$1"
     case "$build_arch" in
-        amd64) echo "x86_64" ;;
+        amd64) echo "amd64" ;;
         armhf) echo "armv7l" ;;
         aarch64) echo "arm64" ;;
         *) 

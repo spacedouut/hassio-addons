@@ -67,7 +67,7 @@ get_latest_release() {
 # Function to validate release exists and has required assets
 validate_release() {
     local release="$1"
-    local required_archs=("x86_64" "armv7l" "arm64")
+    local required_archs=("amd64" "armv7l" "arm64")
     local base_url="https://github.com/hyperion-project/hyperion.ng/releases/download/${release}"
     
     echo "Validating release ${release} has required assets..." >&2
