@@ -31,7 +31,7 @@
   "map": [
     "config:rw"
   ],
-  "image": "bradsjm/hyperion-ng-addon-{arch}",
+  "image": "ghcr.io/spacedouut/hassio-addons/hyperion-ng-{arch}",
   "options": {},
   "schema": {},
   "privileged": [
