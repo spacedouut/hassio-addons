@@ -104,6 +104,9 @@ jobs:
 
       - name: Build and push Docker image
         if: github.event.inputs.test_mode != 'true'
+        env:
+          DOCKER_USER: ${{ github.actor }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: |
           chmod +x ./.github/scripts/build-hyperion.sh
           ./.github/scripts/build-hyperion.sh ${{ matrix.arch }}
