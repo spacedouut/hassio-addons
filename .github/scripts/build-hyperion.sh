@@ -11,7 +11,8 @@ if [ -n "${DOCKER_USER:-}" ] && [ -n "${DOCKER_PASSWORD:-}" ]; then
 fi
 
 docker run --rm --privileged \
-    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v ${HOME}/.docker/config.json:/root/.docker/config.json:ro \
     -v ${GITHUB_WORKSPACE:-$(PWD)}/addon-hyperion-ng:/data \
     homeassistant/amd64-builder \
     --target /data \
